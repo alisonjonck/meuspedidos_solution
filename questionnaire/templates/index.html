@@ -1,0 +1,40 @@
+<form action="/questionario/" method="post">{% csrf_token %}
+	{{ form.non_field_errors }}
+	<table>
+		<tr><td colspan="2">{{ form.name.errors }}</td></tr>
+		<tr><td><label for="id_name">*Nome Completo: </label></td>
+		<td>{{ form.name }}</td></tr>
+		<tr><td colspan="2">{{ form.email.errors }}</td></tr>
+		<tr><td><label for="id_email">*Email: </label></td>
+		<td>{{ form.email }}</td></tr>
+	</table>
+
+	<p>Avalie seu conhecimento nas tecnologias abaixo entre 0-10: </p>
+	<table>
+		<tr><td colspan="2">{{ form.html.errors }}</td></tr>
+		<tr><td><label for="id_html">HTML: </label></td>
+		<td>{{ form.html }}</td></tr>
+		<tr><td colspan="2">{{ form.css.errors }}</td></tr>
+		<tr><td><label for="id_css">CSS: </label></td>
+		<td>{{ form.css }}</td></tr>
+		<tr><td colspan="2">{{ form.javascript.errors }}</td></tr>
+		<tr><td><label for="id_javascript">Javascript: </label></td>
+		<td>{{ form.javascript }}</td></tr>
+
+		<tr><td colspan="2">{{ form.python.errors }}</td></tr>
+		<tr><td><label for="id_python">Python: </label></td>
+		<td>{{ form.python }}</td></tr>
+		<tr><td colspan="2">{{ form.django.errors }}</td></tr>
+		<tr><td><label for="id_django">Django: </label></td>
+		<td>{{ form.django }}</td></tr>
+
+		<tr><td colspan="2">{{ form.ios.errors }}</td></tr>
+		<tr><td><label for="id_ios">iOS: </label></td>
+		<td>{{ form.ios }}</td></tr>
+		<tr><td colspan="2">{{ form.android.errors }}</td></tr>
+		<tr><td><label for="id_android">Android: </label></td>
+		<td>{{ form.android }}</td></tr>
+	</table>
+
+	<input type="submit" value="Submit" />
+</form>
